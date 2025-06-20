@@ -496,7 +496,7 @@ export default function GabrielRodriguesWebsite() {
                 </Button>
                 <Button
                   variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-amber-600 font-black px-6 py-3 text-sm tracking-wider touch-manipulation"
+                  className="border-white hover:bg-white hover:text-amber-600 font-black px-6 py-3 text-sm tracking-wider touch-manipulation text-orange-700"
                 >
                   SAIBA MAIS
                 </Button>

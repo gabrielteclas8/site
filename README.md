@@ -4,32 +4,29 @@ Site oficial do músico, produtor e compositor Gabriel Rodrigues.
 
 ## 🚀 Deploy no Vercel
 
-### Pré-requisitos
-- Conta no GitHub
-- Conta no Vercel
-- Domínio gabrielrodriguesoficial.com.br
+### Comandos para Deploy
 
-### Passos para Deploy
-
-1. **Subir para GitHub:**
+1. **Instalar dependências:**
 \`\`\`bash
-git init
-git add .
-git commit -m "Initial commit: Gabriel Rodrigues Oficial"
-git remote add origin https://github.com/SEU_USUARIO/gabriel-rodrigues-oficial.git
-git push -u origin main
+npm install
 \`\`\`
 
-2. **Deploy no Vercel:**
-- Acesse [vercel.com](https://vercel.com)
-- Conecte com GitHub
-- Selecione o repositório
-- Configure o domínio personalizado
+2. **Build local (teste):**
+\`\`\`bash
+npm run build
+\`\`\`
 
-3. **Configurar Domínio:**
-- No painel do Vercel, vá em Settings > Domains
-- Adicione: gabrielrodriguesoficial.com.br
-- Configure os DNS conforme instruções
+3. **Deploy no Vercel:**
+\`\`\`bash
+vercel --prod
+\`\`\`
+
+### Configurações Importantes
+
+- **Domínio:** gabrielrodriguesoficial.com.br
+- **Framework:** Next.js 14
+- **Node.js:** 18.x
+- **Região:** São Paulo (gru1)
 
 ### Estrutura do Projeto
 
@@ -39,10 +36,15 @@ gabriel-rodrigues-oficial/
 │   ├── page.tsx (Gabriel Rodrigues - Página Principal)
 │   ├── bless-records/
 │   │   └── page.tsx (Bless Records - Subpágina)
+│   ├── layout.tsx
 │   ├── globals.css
-│   └── layout.tsx
+│   ├── loading.tsx
+│   ├── error.tsx
+│   └── not-found.tsx
 ├── public/
-│   └── gabriel-photos/ (Fotos do Gabriel)
+│   ├── gabriel-photos/
+│   ├── albums/
+│   └── logo/
 ├── components/ui/
 ├── package.json
 ├── next.config.js
@@ -50,23 +52,23 @@ gabriel-rodrigues-oficial/
 └── tailwind.config.ts
 \`\`\`
 
-### Tecnologias Utilizadas
+### Tecnologias
 
 - **Next.js 14** - Framework React
 - **TypeScript** - Tipagem estática
 - **Tailwind CSS** - Estilização
 - **Framer Motion** - Animações
-- **Vercel** - Hospedagem e deploy
+- **Vercel** - Hospedagem
 
 ### Funcionalidades
 
 ✅ **Página Principal - Gabriel Rodrigues:**
 - Hero section com fotos profissionais
 - Biografia completa
+- Seção dedicada ao álbum "No Reino de Deus"
 - Discografia com álbuns
 - Galeria fotográfica
-- Seção de contato
-- Links para redes sociais
+- Seção de contato com redes sociais clicáveis
 
 ✅ **Subpágina - Bless Records:**
 - Informações do estúdio
@@ -76,13 +78,14 @@ gabriel-rodrigues-oficial/
 
 ✅ **Recursos Técnicos:**
 - 100% responsivo (mobile-first)
-- Animações suaves
+- Animações suaves com Framer Motion
 - Efeitos 3D nos cards
 - Menu lateral overlay
 - Scroll suave entre seções
 - Otimizado para SEO
+- Logo da Família Rodrigues integrada
 
-### Comandos Úteis
+### Comandos de Desenvolvimento
 
 \`\`\`bash
 # Desenvolvimento
@@ -111,6 +114,14 @@ Tipo: CNAME
 Nome: www
 Valor: cname.vercel-dns.com
 \`\`\`
+
+### Troubleshooting
+
+Se houver erros de build:
+
+1. Limpar cache: `rm -rf .next node_modules package-lock.json`
+2. Reinstalar: `npm install`
+3. Build novamente: `npm run build`
 
 ### Suporte
 

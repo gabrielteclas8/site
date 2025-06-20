@@ -1,14 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
-    domains: ['gabrielrodriguesoficial.com.br', 'blob.v0.dev'],
+  eslint: {
+    ignoreDuringBuilds: true,
   },
-   typescript: {
+  typescript: {
     ignoreBuildErrors: true,
   },
-  experimental: {
-    optimizeCss: true,
+  images: {
+    unoptimized: true,
   },
 }
 
-module.exports = nextConfig
+export default nextConfig

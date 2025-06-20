@@ -12,10 +12,5 @@
       "dest": "/$1"
     }
   ],
-  "functions": {
-    "app/**/*.{js,ts,jsx,tsx}": {
-      "runtime": "nodejs18.x"
-    }
-  },
   "regions": ["gru1"]
 }
